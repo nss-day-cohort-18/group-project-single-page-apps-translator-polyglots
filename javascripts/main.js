@@ -34,15 +34,15 @@ function clear() {
 button.addEventListener('click', function () {
   var textInput = document.getElementById('text-input').value;
   dictionary(textInput);
-)};
+});
 
 // Determines when clear button is clicked then runs clear function if true
 reload.addEventListener('click', clear);
 
 // When enter is pressed calls back to button
-document.getElementById('temp').onkeypress = function (e) {
-  if (e.keyCode == 13) {
-    e.preventDefault();
-    var pressedEnter = document.getElementById('translate-button').click();
-  }
-};
+// document.getElementById('temp').onkeypress = function (e) {
+//   if (e.keyCode == 13) {
+//     e.preventDefault();
+//     var pressedEnter = document.getElementById('translate-button').click();
+//   }
+// };

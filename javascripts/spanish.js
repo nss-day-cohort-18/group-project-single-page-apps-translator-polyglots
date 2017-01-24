@@ -1,6 +1,6 @@
 "use strict";
 
-var dictionary = (function('variable in main.js'){
+var dictionary = (function(textInput){
 	//the available words that can be translated
 	var spanish = {
 		"merry": "alegre",
@@ -11,17 +11,19 @@ var dictionary = (function('variable in main.js'){
 		"year": "año"
 	};
 	//grabbing the english 'key' from the above object
-	'variable in main.js'.getEnglish = function(word){
+	textInput.getEnglish = function(word){
 		return spanish[word];
 	};
 	//using the English word to see what it's translation is 
-	'variable in main.js'.setSpanish = function(newWord){
+	textInput.setSpanish = function(newWord){
 		console.log("word choice: ", newWord)
 		spanish[newWord] = newWord.value;
 		console.log("translated word: ", spanish)
 	};
 
-	return 'variable in main.js';
+	return textInput;
 
 
-})('variable in main.js');
+})(dictionary);
+
+console.log(dictionary);
