@@ -20,5 +20,6 @@ var dictionary = (function(originalDictionary) {
   originalDictionary.translateGerman = function(germanTrans) {
     return german[germanTrans];
   };
+  console.log('is this working?');
 
 })(dictionary);
