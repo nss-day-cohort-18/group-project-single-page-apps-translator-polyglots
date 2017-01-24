@@ -10,6 +10,9 @@ var dictionary = (function(textInput){
 		"new": "nuevo",
 		"year": "año"
 	};
+
+	console.log(spanish);
+
 	//grabbing the english 'key' from the above object
 	textInput.getEnglish = function(word){
 		return spanish[word];
@@ -22,8 +25,8 @@ var dictionary = (function(textInput){
 	};
 
 	return textInput;
-
-
+	//when the IIFE fires, the below parameter 'dictionary' will be passed into the function on line 3, 
+	//and will take the place of every instance of the variable 'textInput'
 })(dictionary);
 
 console.log(dictionary);
