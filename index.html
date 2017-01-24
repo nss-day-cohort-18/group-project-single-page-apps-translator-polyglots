@@ -12,22 +12,22 @@
     <h1>Holiday Translator</h1>
     <fieldset>
       <legend>Enter text to be translated</legend>
-      <label for="temp">Type your text here:</label>
-      <input type="text" id="text-input" name="textInput">
+      <textarea rows="5" cols="80"type="text" id="text-input" placeholder="Type your text here" name="textInput"></textarea>
     </fieldset>
     <fieldset>
       <legend>What are you translating to?</legend>
-      <input type = "radio" id = "french-input" name = "french-trans">French<br>
-      <input type = "radio" id = "spanish-input" name = "spanish-trans">Spanish<br>
-      <input type = "radio" id = "german-input" name = "german-trans">German<br>
+      <input type = "radio" id = "french-input" name = "trans" value="french">French<br>
+      <input type = "radio" id = "spanish-input" name = "trans" value="spanish">Spanish<br>
+      <input type = "radio" id = "german-input" name = "trans" value="german">German<br>
       <button for="translate" id="translate-button" type="button">Translate!</button>
-      <button for="clear" id="clearButton" type="reset">Clear All</button>
+      <button for="clear" id="clear-button" type="reset">Clear All</button>
     </fieldset>
     </form>
     <div class="converted">
       <p id="translation"></p>
     </div>
   </div>
-
+  <script src="javascripts/german.js" type="text/javascript"></script>
+  <script src="javascripts/main.js" type="text/javascript"></script>
 </body>
 </html>
