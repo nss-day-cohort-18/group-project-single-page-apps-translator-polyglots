@@ -1,6 +1,6 @@
 "use strict";
 
-var dictionary = (function(originalDictionary){
+var Dictionary = (function(originalDictionary){
 	//the available words that can be translated
 	var spanish = {
 		"merry": "alegre",
@@ -12,14 +12,14 @@ var dictionary = (function(originalDictionary){
 	};
 
 	
-
-	return {
+console.log(spanish);
 		originalDictionary.translateToSpanish = function(espana){
 			return spanish[espana];
+
 		}
-	};
+		return originalDictionary;
 	//when the IIFE fires, the below parameter 'dictionary' will be passed into the function on line 3, 
 	//and will take the place of every instance of the variable 'textInput'
-})(dictionary);
+})(Dictionary);
 
-console.log(dictionary);
+console.log(Dictionary);

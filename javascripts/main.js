@@ -35,10 +35,10 @@ button.addEventListener('click', function () {
     // Checks to see which radio button is checked and runs appropriate translate function
     if (document.getElementById('german-input').checked === true) {
       translatedWords = Dictionary.translateToGerman(englishArray[i].toLowerCase());
-    }
+    } 
     if (document.getElementById('spanish-input').checked === true) {
       translatedWords = Dictionary.translateToSpanish(englishArray[i].toLowerCase());
-    }
+    } 
     if (document.getElementById('french-input').checked === true) {
       translatedWords = Dictionary.translateToFrench(englishArray[i].toLowerCase());
     }
