@@ -23,6 +23,7 @@ button.addEventListener('click', function () {
 
   // Pulls input text and defines where to put translation on DOM
   var textInput = document.getElementById('text-input').value;
+
   var translation = document.getElementById('translation');
 
   // Takes input text and turns into an array so each word can be translated
