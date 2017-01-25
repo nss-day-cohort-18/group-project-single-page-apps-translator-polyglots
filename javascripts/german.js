@@ -1,6 +1,6 @@
 'use strict';
 
-var dictionary = (function(originalDictionary) {
+var Dictionary = (function() {
 
   var german = {
     'merry': 'frohe',
@@ -17,9 +17,11 @@ var dictionary = (function(originalDictionary) {
     'reindeer':'rentier'
   };
 
-  originalDictionary.translateGerman = function(germanTrans) {
-    return german[germanTrans];
+  return {
+    translateToGerman: function(translateWord) {
+      return german[translateWord];
+    }
   };
-  console.log('is this working?');
 
-})(dictionary);
+
+})();
