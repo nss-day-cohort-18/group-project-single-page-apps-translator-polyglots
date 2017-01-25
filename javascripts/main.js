@@ -43,7 +43,7 @@ button.addEventListener('click', function () {
       translatedWords = Dictionary.translateToFrench(englishArray[i].toLowerCase());
     }
     if (document.getElementById('russian-input').checked === true) {
-      responsiveVoice.speak('Sorry, Komrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.', "Australian Female");
+      responsiveVoice.speak('Sorry, comrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.', "Australian Female");
       // alert('Sorry, Komrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.')
       break;
     }
