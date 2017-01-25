@@ -43,8 +43,9 @@ button.addEventListener('click', function () {
       translatedWords = Dictionary.translateToFrench(englishArray[i].toLowerCase());
     }
     if (document.getElementById('russian-input').checked === true) {
-      alert('Sorry, Komrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.')
-    break;
+      responsiveVoice.speak('Sorry, Komrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.', "Australian Female");
+      // alert('Sorry, Komrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.')
+      break;
     }
 
     translatedArray.push(translatedWords); // Pushes translated words into array
@@ -54,6 +55,8 @@ button.addEventListener('click', function () {
 
   finalTranslation = translatedArray.join(''); // Joins translated words from array into a string
   translation.innerHTML = finalTranslation; // Prints to DOM
+
+  responsiveVoice.speak(finalTranslation, "Australian Female");
 
 });
 
