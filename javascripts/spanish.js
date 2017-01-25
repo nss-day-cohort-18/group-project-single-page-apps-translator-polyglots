@@ -1,4 +1,4 @@
-"use strict";
+	"use strict";
 
 var dictionary = (function(originalDictionary){
 	//the available words that can be translated
@@ -14,7 +14,7 @@ var dictionary = (function(originalDictionary){
 	
 
 	return {
-		originalTranslate.toSpanish = function(espana) {
+		originalDictionary.translateToSpanish = function(espana) {
 			return spanish[espana];
 		}
 	};

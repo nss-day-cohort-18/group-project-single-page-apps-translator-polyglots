@@ -7,42 +7,50 @@ var results = document.getElementById('translation');
 var button = document.getElementById('translate-button');
 var reload = document.getElementById('clear-button');
 
-
-
-
-
-// Determines which language should
-// be translated to based on which radio button is selected.
-function dictionary(textInput) {
-  if (document.getElementById('french-input').checked === true) {
-    translateFrench(textInput);
-  }
-  if (document.getElementById('spanish-input').checked === true) {
-    translateSpanish(textInput);
-  }
-  if (document.getElementById('german-input').checked === true) {
-    translateGerman(textInput);
-  }
-}
-
 // Reloads the page if reset button is pressed
 function clear() {
   window.location.reload();
 }
 
-// Determines when button is clicked then runs function to determine language
+// Determines when button is clicked then runs a really big function to
+// pull input text, set input text as array, determine which language, send to translate
+// function, then pull back translation, join words with .join method and finally write to DOM
 button.addEventListener('click', function () {
+  // Set variables
+  var translatedWords;
+  var finalTranslation;
+  var translatedArray = [];
+
+  // Pulls input text and defines where to put translation on DOM
   var textInput = document.getElementById('text-input').value;
-  dictionary(textInput);
+  var translation = document.getElementById('translation');
+
+  // Takes input text and turns into an array so each word can be translated
+  var englishArray = textInput.split(' ');
+
+  // Loops through array of english words and sends each one to translation function
+  for (let i = 0; i < englishArray.length; i++) {
+
+    // Checks to see which radio button is checked and runs appropriate translate function
+    if (document.getElementById('german-input').checked === true) {
+      translatedWords = Dictionary.translateToGerman(englishArray[i].toLowerCase());
+    }
+    if (document.getElementById('spanish-input').checked === true) {
+      translatedWords = Dictionary.translateToSpanish(englishArray[i].toLowerCase());
+    }
+    if (document.getElementById('french-input').checked === true) {
+      translatedWords = Dictionary.translateToFrench(englishArray[i].toLowerCase());
+    }
+
+    translatedArray.push(translatedWords); // Pushes translated words into array
+    translatedArray.push(' '); // Adds a space string between each word
+
+  }
+
+  finalTranslation = translatedArray.join(''); // Joins translated words from array into a string
+  translation.innerHTML = finalTranslation; // Prints to DOM
+
 });
 
 // Determines when clear button is clicked then runs clear function if true
 reload.addEventListener('click', clear);
-
-// When enter is pressed calls back to button
-// document.getElementById('temp').onkeypress = function (e) {
-//   if (e.keyCode == 13) {
-//     e.preventDefault();
-//     var pressedEnter = document.getElementById('translate-button').click();
-//   }
-// };
