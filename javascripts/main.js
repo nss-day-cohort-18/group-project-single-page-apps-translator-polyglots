@@ -35,7 +35,7 @@ button.addEventListener('click', function () {
     // Checks to see which radio button is checked and runs appropriate translate function
     if (document.getElementById('german-input').checked === true) {
       translatedWords = Dictionary.translateToGerman(englishArray[i].toLowerCase());
-    } 
+    }
     if (document.getElementById('spanish-input').checked === true) {
       translatedWords = Dictionary.translateToSpanish(englishArray[i].toLowerCase());
     }
@@ -44,6 +44,7 @@ button.addEventListener('click', function () {
     }
     if (document.getElementById('russian-input').checked === true) {
       alert('Sorry, Komrade. Russian translation is no longer available. However, President Trump will send Vladimir "Pooty-Poot" Putin over to translate for you as soon as possible.')
+    break;
     }
 
     translatedArray.push(translatedWords); // Pushes translated words into array
