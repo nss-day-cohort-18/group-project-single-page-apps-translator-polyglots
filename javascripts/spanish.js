@@ -12,6 +12,7 @@ var Dictionary = (function(originalDictionary){
 	};
 
 
+
 		originalDictionary.translateToSpanish = function(espana) {
 			return spanish[espana];
     };
@@ -20,3 +21,16 @@ var Dictionary = (function(originalDictionary){
 	//when the IIFE fires, the below parameter 'dictionary' will be passed into the function on line 3,
 	//and will take the place of every instance of the variable 'textInput'
 })(Dictionary);
+	
+console.log(spanish);
+		originalDictionary.translateToSpanish = function(espana){
+			return spanish[espana];
+
+		}
+		return originalDictionary;
+	//when the IIFE fires, the below parameter 'dictionary' will be passed into the function on line 3, 
+	//and will take the place of every instance of the variable 'textInput'
+})(Dictionary);
+
+console.log(Dictionary);
+

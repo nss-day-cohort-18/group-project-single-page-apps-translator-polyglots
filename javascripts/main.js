@@ -23,6 +23,7 @@ button.addEventListener('click', function () {
 
   // Pulls input text and defines where to put translation on DOM
   var textInput = document.getElementById('text-input').value;
+
   var translation = document.getElementById('translation');
 
   // Takes input text and turns into an array so each word can be translated
@@ -34,11 +35,10 @@ button.addEventListener('click', function () {
     // Checks to see which radio button is checked and runs appropriate translate function
     if (document.getElementById('german-input').checked === true) {
       translatedWords = Dictionary.translateToGerman(englishArray[i].toLowerCase());
-    }
+    } 
     if (document.getElementById('spanish-input').checked === true) {
       translatedWords = Dictionary.translateToSpanish(englishArray[i].toLowerCase());
     }
-
     if (document.getElementById('french-input').checked === true) {
       translatedWords = Dictionary.translateToFrench(englishArray[i].toLowerCase());
     }
